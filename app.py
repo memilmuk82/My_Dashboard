@@ -11,7 +11,8 @@ def home():
 def send():
     skill = request.form.get('skill')
     
-    messages.append(skill)
+    if skill:
+        messages.append(skill)
     
     return redirect('/')
 
